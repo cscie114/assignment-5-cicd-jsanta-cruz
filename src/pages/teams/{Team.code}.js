@@ -18,7 +18,7 @@ const TeamPage = ( { pageContext, data } ) => {
           <Team key={team.id} team={team}></Team>
            <h3>All Players</h3>
            <GatsbyImage image={qbIcon} />
-           <Player key={player.id} player={player}></Player>
+           <Player key={player?.id} player={player}></Player>
         </Layout>
     );
   };
