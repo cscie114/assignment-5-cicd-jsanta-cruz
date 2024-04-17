@@ -1,0 +1,14 @@
+
+.player_article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+article {
+    text-align: center;
+    height:100%;
+    margin: 1rem;
+}
+

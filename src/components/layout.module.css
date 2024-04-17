@@ -1,0 +1,48 @@
+
+body {
+    margin: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav ul {
+    display: unset;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-right: 1rem;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.logo {
+    align-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.team_list {
+        display: unset;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+}
+
+.team_name {
+    text-align: center;
+}
+
+.team_logo {
+    vertical-align: middle;
+    padding-left: 1.1rem;
+    margin: 1rem;
+}
+
