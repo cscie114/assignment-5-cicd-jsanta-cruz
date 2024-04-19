@@ -41,7 +41,7 @@ let responseData = {}
 console.log(responseData)
 
 
-     responseData.response.forEach((team) => {
+     responseData?.response.forEach((team) => {
         console.log("data: " + team),
         createNode({
         ...team,
