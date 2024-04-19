@@ -11,8 +11,9 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    env:
+      NFL_API_KEY: ${{ secrets.NFL_API_KEY }}
 
     steps:
     - uses: actions/checkout@v4
