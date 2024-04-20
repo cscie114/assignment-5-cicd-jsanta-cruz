@@ -23,7 +23,8 @@ jobs:
     - run: npm run lint
     - run: npm test
     - run: npm run build --if-present
-    - uses: nwtgck/actions-netlify@v3.0
+    - name: Deploy GitHub Action to Netlify
+      uses: nwtgck/actions-netlify@v3.0
       with:
         publish-dir: 'public'
         production-branch: main
