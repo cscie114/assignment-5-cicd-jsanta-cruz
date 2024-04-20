@@ -7,7 +7,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 
 
-const TeamPage = ( { pageContext, data } ) => {
+const TeamPage = ( { data } ) => {
     const team = data.allTeam.nodes[0];
     const player = data.allPlayersJson.nodes[0];
     const qbMarkDown = data.allMarkdownRemark.nodes[0];
