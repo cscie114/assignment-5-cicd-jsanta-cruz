@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from '../../components/layout'
+import Footer from "../../components/footer"
 import Team from '../../components/team'
 import Player from '../../components/player'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -14,12 +15,15 @@ const TeamPage = ( { data } ) => {
     const qbIcon = getImage(qbMarkDown?.frontmatter?.image?.childImageSharp?.gatsbyImageData)
     console.log(player);
     return (
+      <div>
         <Layout pageTitle={"2023 "+team.name}>
           <Team key={team.id} team={team}></Team>
            <h3>All Players</h3>
            <GatsbyImage image={qbIcon} />
            <Player key={player?.id} player={player}></Player>
         </Layout>
+        <Footer></Footer>
+        </div>
     );
   };
 

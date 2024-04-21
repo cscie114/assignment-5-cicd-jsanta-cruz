@@ -2,10 +2,12 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import { team_list, team_name, team_logo, } from "../components/layout.module.css";
+import Footer from "../components/footer";
 
 const TeamsPage = (props) => {
   const teams = props.data.allTeam.nodes;
   return (
+    <div>
     <Layout pageTitle="All Teams">
       <ul className={team_list}>
         {teams.map((team) => {
@@ -22,6 +24,8 @@ const TeamsPage = (props) => {
         })}
       </ul>
     </Layout>
+    <Footer></Footer>
+    </div>
   );
 };
 

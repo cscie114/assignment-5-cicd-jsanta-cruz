@@ -37,9 +37,6 @@ const Layout = ({ pageTitle, children }) => {
         <h2>{pageTitle}</h2>
         {children}
       </main>
-      <footer>
-                Example footer developed for CSCI E-114, Spring 2024.
-        </footer>
     </div>
   );
 };
