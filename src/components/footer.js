@@ -1,9 +1,9 @@
 import * as React from "react";
 
-const Footer = ({  }) => {
+const Footer = ({ data }) => {
     return (
 <footer>
-Example footer developed for CSCI E-114, Spring 2024.
+{data.site.siteMetadata.title} Example footer developed for CSCI E-114, Spring 2024.
 </footer>
     );
 }
