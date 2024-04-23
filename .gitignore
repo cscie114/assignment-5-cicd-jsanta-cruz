@@ -12,3 +12,5 @@ public
 
 # Local Netlify folder
 .netlify
+/netlify/functions/omdbApi.js
+/src/pages/movie-test.js
