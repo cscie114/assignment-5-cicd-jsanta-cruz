@@ -49,3 +49,4 @@ export const query = graphql`
 //export const Head = () => <Seo title="Parks"></Seo>
 
 export default TeamsPage;
+export const Head = () => <title>All Teams</title>

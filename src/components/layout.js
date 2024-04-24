@@ -30,6 +30,9 @@ const Layout = ({ pageTitle, children }) => {
             <li>
               <Link to="/teams">All Teams</Link>
             </li>
+            <li>
+              <Link to="/injury-report">Injury Report</Link>
+            </li>
           </ul>
         </nav>
       </header>
