@@ -11,8 +11,6 @@ const InjuryReport = () => {
     fetch(`/.netlify/functions/amerFootballAPI?team=${num}`, {
       method: "GET",
     }).then((result) => {
-        console.log("injury data 1", result)
-
         return result.json();
       }).then((json) => {
         console.log("injury: ", json.data)
@@ -20,10 +18,23 @@ const InjuryReport = () => {
       });
   }, [injuryData.player]);
 console.log("injury data", injuryData)
+const styles = {
+    button: {
+        padding: "1rem",
+        color: "#fff",
+        border: "none",
+        backgroundColor: "#768294",
+        display: "inline-block",
+        margin: "1rem"
+    },
+    teamName: {
+        display: "inline-block"
+    }
+};
   return (
     <div>
-      <Layout pageTitle="Injury Report for the 2023 Season">
-        <button
+      <Layout pageTitle="Injury Report for the 2023/ 2024 Season">
+        <button style={styles.button}
           onClick={() => { 
             const num = Math.round(Math.random() * 32)
             fetch(`/.netlify/functions/amerFootballAPI?team=${num}`, {
@@ -36,7 +47,7 @@ console.log("injury data", injuryData)
               setInjuryData(json.data.response);
             });}}>
           Click for a new team!
-        </button>
+        </button><h3 style={styles.teamName}>{injuryData[0]?.team?.name}</h3>
         <div className={playerStyles.player_article}>
           {Object.entries(injuryData).map((item, i) => {
                 return <article key={i}>
@@ -56,4 +67,3 @@ console.log("injury data", injuryData)
 
 export default InjuryReport;
 export const Head = () => <title>Injury Report</title>
-//const pageTypeObj = window?.dataLayer.find((data) => data.hasOwnProperty("pageType")

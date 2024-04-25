@@ -17,7 +17,10 @@ NFL_API_KEY="YOUR KEY HERE"
 
 ```
 Clone this repository using SSH to your local source folder:
-git@github.com:cscie114/assignment-4-gatsby-jsanta-cruz.git
+git@github.com:cscie114/assignment-5-cicd-jsanta-cruz.git
+
+Production site:
+**https://josh-assignment-5.netlify.app/**
 
 To run the project:
 - Install the project using **npm install**
@@ -28,7 +31,8 @@ To run the project:
 To ensure that GitHub actions are set up
 - Review the node.js.yml file to see if you can run the commands
 - The package.JSON has the commands included to build the project
-- Ensure that your API Key that you are using to call the API-SPORT NFL API is configured as a secret
+- Ensure that your API Key that you are using to call the API-SPORT NFL API is configured as a GitHub secret
+
 To run CI tests using Jest and ESLINT
 - Install jest so that you can run the unit test locally
 - Install eslint
@@ -39,5 +43,7 @@ To run Netlify CLI locally to see the serverless function
 - Install  **npm install netlify-cli --save-dev**
 - Login **npx netlify login** using your Netlify account
 - Link Netlify CLI to your project **npx netlify link** as an authorized app
+
+The Injury Report page uses a serverless function called `amerFootballAPI` to call the injured players from the NFL API.
 
 I hope that you enjoy this project! :football:
